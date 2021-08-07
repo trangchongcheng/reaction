@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style2.css" />
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="feed">
-        <a class="like-btn">
-          <div class="reaction-box">
-            <div class="reaction-icon like">
-              <label>Like</label>
-            </div>
-            <div class="reaction-icon love">
-              <label>Love</label>
-            </div>
-            <div class="reaction-icon haha">
-              <label>Haha</label>
-            </div>
-            <div class="reaction-icon wow">
-              <label>Wow</label>
-            </div>
-            <div class="reaction-icon sad">
-              <label>Sad</label>
-            </div>
-            <div class="reaction-icon angry">
-              <label>Angry</label>
-            </div>
+      <a class="like-btn">
+        <div class="reaction-box">
+          <div class="reaction-icon like">
+            <label>Like</label>
           </div>
-        </a>
-      </div> 
-</body>
+          <div class="reaction-icon love">
+            <label>Love</label>
+          </div>
+          <div class="reaction-icon haha">
+            <label>Haha</label>
+          </div>
+          <div class="reaction-icon wow">
+            <label>Wow</label>
+          </div>
+          <div class="reaction-icon sad">
+            <label>Sad</label>
+          </div>
+          <div class="reaction-icon angry">
+            <label>Angry</label>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <script>
+      $(function () {
+        $(".like-btn").hover(
+          function () {
+            $(".reaction-icon").each(function (i, e) {
+              setTimeout(function () {
+                $(e).addClass("show");
+              }, i * 100);
+            });
+          },
+          function () {
+            $(".reaction-icon").removeClass("show");
+          }
+        );
+      });
+    </script>
+  </body>
 </html>

@@ -7,7 +7,7 @@ body {
 .feed {
   width: 500px;
   height: 473px;
-  background-image: url(https://i.imgur.com/HckmGbj.png);
+  background-image: url("2.png");
   position: relative;
 }
 .feed .like-btn {
@@ -86,7 +86,7 @@ body {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: url(https://i.imgur.com/eo71KDP.png);
+  background: url("1.png");
   background-size: cover;
   border-radius: 20px;
   margin: 8px -1px 0 8px;
